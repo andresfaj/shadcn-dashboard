@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 
 export default function Page() {
   return (
@@ -69,11 +68,7 @@ export default function Page() {
           loop: true, //This is for the loop option, in other words, the carousel will loop back to the first item when the last item is reached
         }}
         className='w-full max-w-sm'
-        plugins={[
-          Autoplay({
-            delay: 1000, //Time in milliseconds for the auto-play to change the slide
-          }),
-        ]}
+        autoplay={1500}
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
